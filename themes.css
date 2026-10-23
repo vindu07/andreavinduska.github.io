@@ -1,0 +1,20 @@
+body.dark{
+
+    --body-bg: #222;
+    --header-bg: #333;
+    --menu-bg: #222;
+    --button-bg: #555;
+    --text: #fff;
+    --accent1: #2a9d9d;
+
+}
+body.light{
+
+    --body-bg: #eee;
+    --header-bg: #ccc;
+    --menu-bg: #eee;
+    --button-bg: #aaa;
+    --text: #222;
+    --accent1: #5dc4c4;
+
+}
