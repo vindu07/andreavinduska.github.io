@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: https://github.com/vindu07.github.io/personal_website/sitemap.xml
