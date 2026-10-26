@@ -1,0 +1,76 @@
+:root {
+    padding: 0; margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    
+    background: var(--body-bg);
+    color: var(--text);
+
+}
+
+button {
+    border: 0; margin: 0; padding: 0;
+    background: var(--button-bg);
+    color: var(--text);
+}
+button:hover {
+    filter: brightness(120%);
+    transform: scale(1.03);
+
+    transition: ease; transition-duration: 500ms;
+}
+
+header {
+    background: var(--header-bg);
+
+    padding: 2vh; 
+
+    height: 10vh;
+
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .groups {
+    display: flex; flex-direction: row;
+    gap: 2vw;
+}
+
+main {
+    display: flex; flex-direction: row; justify-content: space-between;
+    flex: 1;
+
+}
+main #menu {
+    background: var(--menu-bg);
+
+    width: 20vw;
+    height: 82vh;
+
+    padding: 2vh; border-right: 2px solid var(--accent1);
+
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+main #menu .btn-container {
+    display: flex; flex-direction: column; gap: 2vh;
+}
+main #menu .menu-btn {
+    width: 100%;
+    border-radius: 2rem;
+
+    padding: 0.5rem;
+    display: flex; flex-direction: row; gap: 2vw; 
+}
+main #menu .menu-btn.active {
+    background: var(--accent1);
+}
+main #content {
+    background: linear-gradient(var(--body-bg), var(--header-bg));
+    padding: 2vh;
+    
+    height: 82vh;
+    width: 80vw;
+}
