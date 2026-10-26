@@ -5,13 +5,15 @@ on:
       - main
 jobs:
   build-and-deploy:
-    runs-on: debian-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Install Zola
         run: |
-          apt install zola
+          curl -sSf https://sh.rustup.rs | sh -s -- -y
+          export PATH="$HOME/.cargo/bin:$PATH"
+          cargo install zola
       - name: Build site
         run: |
           zola build
