@@ -3,20 +3,22 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Install Zola
-        run: |
-          curl -sSf https://sh.rustup.rs | sh -s -- -y
-          export PATH="$HOME/.cargo/bin:$PATH"
-          cargo install zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.23.6
+
       - name: Build site
-        run: |
-          zola build
+        run: zola build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
