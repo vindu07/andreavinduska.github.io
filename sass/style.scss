@@ -1,6 +1,21 @@
 :root {
     padding: 0; margin: 0;
+    
+    --text: #0d0f14;
+    --accent-1: #2563eb;
+    --body-bg: #fcfcfc;
+    --header-bg: #ffffff;
+    --button-bg: #f3f4f6;
 }
+
+body.dark {
+    --text: #fffefe;
+    --accent-1: #70d8dc;
+    --body-bg: #292828;
+    --header-bg: #000000;
+    --button-bg: #767474;
+}
+
 
 body {
     margin: 0;
@@ -23,6 +38,12 @@ button:hover {
     transition: ease; transition-duration: 500ms;
 }
 
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: var(--text);
+}
+
 header {
     background: var(--header-bg);
 
@@ -36,41 +57,31 @@ header {
 }
 header .groups {
     display: flex; flex-direction: row;
-    gap: 2vw;
+    gap: 1rem;
+}
+header nav {
+    display: flex; flex-direction: row;
+    gap: 3rem;
+
+    .active a {
+        color: var(--accent-1);
+    }
 }
 
-main {
-    display: flex; flex-direction: row; justify-content: space-between;
-    flex: 1;
-
+header nav div {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0.25rem;
 }
-main #menu {
-    background: var(--menu-bg);
-
-    width: 20vw;
-    height: 82vh;
-
-    padding: 2vh; border-right: 2px solid var(--accent1);
-
-    display: flex; flex-direction: column; justify-content: space-between;
+header .indicators {
+    height: 0.25rem;
+    width: 2.5rem;
+    border-radius: 1rem;    
 }
-main #menu .btn-container {
-    display: flex; flex-direction: column; gap: 2vh;
-}
-main #menu .menu-btn {
-    width: 100%;
-    border-radius: 2rem;
-
-    padding: 0.5rem;
-    display: flex; flex-direction: row; gap: 2vw; 
-}
-main #menu .menu-btn.active {
-    background: var(--accent1);
-}
-main #content {
-    background: linear-gradient(var(--body-bg), var(--header-bg));
-    padding: 2vh;
+header nav .active .indicators {
     
-    height: 82vh;
-    width: 80vw;
+    background: var(--accent-1);
+}
+
+main{
+    padding: 2rem;
 }

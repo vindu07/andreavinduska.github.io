@@ -3,20 +3,42 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Andrea Vinduska's Website</title>
+  <title>Andrea Vinduska</title>
 
-  <base href="/personal_website"/>
-
-  <!--link href="style.css" rel="stylesheet"-->
+  <link href="style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="">
   
   <header>
+
+    <div class="groups"><button>AV</button></div>
+    
     <nav>
-      <a href="/">Home</a>
-      <a href="/projects">Projects</a>
+      <div id="home">
+        <a href="/">Home</a>
+        <div class="indicators"></div>
+      </div>
+      <div id="about">
+        <a href="/about">About</a>
+        <div class="indicators"></div>
+      </div>
+      <div id="projects">
+        <a href="/projects">Projects</a>
+        <div class="indicators"></div>
+      </div>
+      <div id="contact">
+        <a href="/contact">Contact</a>
+        <div class="indicators"></div>
+      </div>
     </nav>
+
+    <div class="groups">
+      <button>B</button>
+      <button>Download CV</button>
+    </div>
+      
+   
   </header>
 
   <main>
@@ -26,6 +48,8 @@
   </main>
   
 </body>
+
+<script src="/main.js" type="module"></script>
 
 </html>
 
