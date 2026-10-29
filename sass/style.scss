@@ -1,16 +1,19 @@
 :root {
     padding: 0; margin: 0;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
     --text: #0d0f14;
+    --text2: #fcfcfc;
     --accent-1: #2563eb;
     --body-bg: #fcfcfc;
     --header-bg: #ffffff;
     --button-bg: #f3f4f6;
 }
-
 body.dark {
     --text: #fffefe;
-    --accent-1: #70d8dc;
+    --text2: #aaa;
+    --accent-1: #2563eb;
     --body-bg: #292828;
     --header-bg: #000000;
     --button-bg: #767474;
@@ -23,26 +26,35 @@ body {
     
     background: var(--body-bg);
     color: var(--text);
+}
 
+li {
+    list-style:none;
 }
 
 button {
     border: 0; margin: 0; padding: 0;
     background: var(--button-bg);
     color: var(--text);
-}
-button:hover {
-    filter: brightness(120%);
-    transform: scale(1.03);
 
-    transition: ease; transition-duration: 500ms;
+    .accent {
+        background: var(--accent-1);
+        color: var(--text2);
+    }
+    :hover {
+        filter: brightness(120%);
+        transform: scale(1.03);
+        transition: ease; transition-duration: 500ms;
+    }
 }
+
 
 a {
     font-style: normal;
     text-decoration: none;
     color: var(--text);
 }
+
 
 header {
     background: var(--header-bg);
@@ -54,34 +66,72 @@ header {
     display: flex; flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-header .groups {
-    display: flex; flex-direction: row;
-    gap: 1rem;
+
+    .groups {
+        display: flex; flex-direction: row;
+        gap: 1rem;
+    }
+    button {
+        position: relative;
+    }
+    #settings-submenu {
+        display: none; flex-direction: column; gap: 0.5rem;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--button-bg);
+        border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;  
+        padding: 0.5rem;      
+    }
+    #settings-btn:hover #settings-submenu {
+        display: flex;
+    }
 }
 header nav {
     display: flex; flex-direction: row;
     gap: 3rem;
 
+    span {
+        display: flex; flex-direction: column;
+        align-items: center; gap: 0.25rem;
+
+        :hover {
+            color: var(--accent-1);
+            transform: scale(1.03);
+            transition: ease; transition-duration: 500ms;
+        }
+    }
     .active a {
         color: var(--accent-1);
     }
+    .indicators {
+        height: 0.25rem;
+        width: 2.5rem;
+        border-radius: 1rem;    
+    }
+    .active .indicators {        
+        background: var(--accent-1);
+    }
+}
+header #logo-img {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-header nav div {
-    display: flex; flex-direction: column;
-    align-items: center; gap: 0.25rem;
-}
-header .indicators {
-    height: 0.25rem;
-    width: 2.5rem;
-    border-radius: 1rem;    
-}
-header nav .active .indicators {
-    
-    background: var(--accent-1);
-}
 
 main{
     padding: 2rem;
+}
+
+
+footer {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 0.2rem;
+    display: flex; flex-direction: row; justify-content: center;
+
+    span {
+        display: flex; flex-direction: row; gap: 1rem; 
+        padding: 0; border:0;
+    }
+    p {
+        padding: 0; margin: 0; border: none;
+    }
 }
