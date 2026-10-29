@@ -19,8 +19,8 @@ jobs:
       - name: Build site
         run: zola build
       - name: Create Cname
-        run:  cd ./public
-              touch CNAME
+        run:  cd ./public,
+              touch CNAME,
               echo 'https://site.andreavinduska.it' -> CNAME
 
       - name: Deploy to GitHub Pages
