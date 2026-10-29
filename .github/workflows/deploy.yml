@@ -20,7 +20,7 @@ jobs:
         run: zola build
       - name: Create Cname
         run: touch CNAME
-        run: echo 'https://site.andreavinduska.it' -> CNAME
+              echo 'https://site.andreavinduska.it' -> CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
