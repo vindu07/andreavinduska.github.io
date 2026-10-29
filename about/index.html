@@ -6,36 +6,56 @@
   <title>Andrea Vinduska</title>
 
   <link href="/style.css" rel="stylesheet">
+
+  <link rel="prefetch" href="/about">
+  <link rel="prefetch" href="/projects">
+  <link rel="preload" href="/contact">
 </head>
 
 <body class="">
   
   <header>
 
-    <div class="groups"><button>AV</button></div>
+    <div class="groups">
+      <button id="logo-btn">
+        <img id="logo-img" src="/icons/logo.svg" alt="logo" height="1rem" width="1rem"></img>
+      </button>
+    </div>
 
     <nav>
-      <div id="home">
+      <span id="home">
         <a href="/">Home</a>
         <div class="indicators"></div>
-      </div>
-      <div id="about">
+      </span>
+      <span id="about">
         <a href="/about">About</a>
         <div class="indicators"></div>
-      </div>
-      <div id="projects">
+      </span>
+      <span id="skills">
+        <a href="/skills">Skills</a>
+        <div class="indicators"></div>
+      </span>
+      <span id="projects">
         <a href="/projects">Projects</a>
         <div class="indicators"></div>
-      </div>
-      <div id="contact">
+      </span>
+      <span id="contact">
         <a href="/contact">Contact</a>
         <div class="indicators"></div>
-      </div>
+      </span>
     </nav>
 
     <div class="groups">
-      <button>B</button>
-      <button>Download CV</button>
+      <button id="settings-btn">
+        <img id="settings-img" src="" alt="settings">
+        <div id="settings-submenu">
+          <li id="theme-btn"><img id="theme-img" src="" alt="theme"></li>
+          <li id="lang-btn"><img id="lang-img" src="" alt="lang"></li>
+        </div>
+      </button>
+      <button id="download-cv-btn" class="accent">
+        <p>Download CV</p>
+      </button>
     </div>
       
    
@@ -53,6 +73,15 @@
 
     </div>
   </main>
+
+  <footer>
+    <span>
+      <p>© 2026 Andrea Vinduska</p>
+      <p>|</p>
+      <p>Powered by</p>
+      <p><a href="https://www.getzola.org/">Zola</a></p>
+    </span>
+  </footer>
   
 </body>
 
