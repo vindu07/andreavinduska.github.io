@@ -127,6 +127,8 @@ footer {
     padding: 0.2rem;
     display: flex; flex-direction: row; justify-content: center;
 
+    filter:brightness(50%);
+
     span {
         display: flex; flex-direction: row; gap: 1rem; 
         padding: 0; border:0;
